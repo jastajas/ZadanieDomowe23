@@ -1,13 +1,17 @@
 public class Circle extends GeometricShape {
 
-    public Circle(double dimensionX) {
-        super(dimensionX);
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
-    public Circle(double dimensionX, double area, double circumference) {
-        super(dimensionX, area, circumference);
+    public double getRadius() {
+        return radius;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Promień koła: " + radius;
+    }
 }
