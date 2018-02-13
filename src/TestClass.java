@@ -1,21 +1,25 @@
 public class TestClass {
     public static void main(String[] args) {
 
-        Circle circle = new Circle(12);
-        Rectangle rectangle = new Rectangle(12,17);
+        CreateShape createShape = new CreateShape();
 
-        Ball ball = new Ball(23);
-        Cube cube = new Cube(14);
+        Line2D line = createShape.createLine();
+        Circle circle = createShape.createCircle();
+        Rectangle rectangle = createShape.createRectangle();
+        Ball ball = createShape.createBall();
+        Cube cube = createShape.createCube();
 
-        ShapeCalculator sc = new ShapeCalculator();
+        ShapeCalculator sCalc = new ShapeCalculator();
 
-        sc.circleArea(circle);
-
-        sc.rectangleArea(rectangle);
-
-        sc.ballVolume(ball);
-
-        sc.cubeVolume(cube);
+        System.out.printf("Długość odcinka wynosi: %.2f \n", sCalc.lineLength(line));
+        System.out.printf("Pole koła wynosi: %.2f \n", sCalc.circleArea(circle));
+        System.out.printf("Obwód koła wynosi: %.2f \n", sCalc.circleCircumference(circle));
+        System.out.printf("Pole prostokąta wynosi: %.2f \n", sCalc.rectangleArea(rectangle));
+        System.out.printf("Obwód prostokąta wynosi: %.2f \n", sCalc.rectangleCircumference(rectangle));
+        System.out.printf("Objętość kuli wynosi: %.2f \n", sCalc.ballVolume(ball));
+        System.out.printf("Powierzchnia kuli wynosi: %.2f \n", sCalc.ballSurfaceArea(ball));
+        System.out.printf("Objętość sześcianu wynosi: %.2f \n", sCalc.cubeVolume(cube));
+        System.out.printf("Powierzchnia sześcianu wynosi: %.2f \n", sCalc.cubeSurfaceArea(cube));
 
     }
 }
