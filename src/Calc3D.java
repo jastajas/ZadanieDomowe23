@@ -1,7 +1,8 @@
 public interface Calc3D {
 
-    public void ballVolume(Ball ball);
-
-    public void cubeVolume(Cube cube);
+    public double ballVolume(Ball ball);
+    public double ballSurfaceArea(Ball ball);
+    public double cubeVolume(Cube cube);
+    public double cubeSurfaceArea(Cube cube);
 
 }
