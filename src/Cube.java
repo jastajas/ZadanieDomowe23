@@ -1,10 +1,18 @@
 public class Cube extends Shape3D {
 
-    public Cube(double dimensionX) {
-        super(dimensionX);
+    private double side;
+    private final int apexes = 8;
+
+    public Cube(double side) {
+        this.side = side;
     }
 
-    public Cube(double dimensionX, double area, double volume) {
-        super(dimensionX, area, volume);
+    public double getSide() {
+        return side;
+    }
+
+    @Override
+    public String toString() {
+        return "Bok sześcianu: " + side;
     }
 }
