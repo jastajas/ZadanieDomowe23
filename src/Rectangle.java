@@ -1,28 +1,23 @@
 public class Rectangle extends GeometricShape {
-    private double dimensionY;
+    private double sideA;
+    private double sideB;
+    private final int apexes = 4;
 
-    public Rectangle(double dimensionX, double dimensionY) {
-        super(dimensionX);
-        this.dimensionY = dimensionY;
+    public Rectangle(double sideA, double sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
-    public Rectangle(double dimensionX, double area, double circumference, double dimensionY) {
-        super(dimensionX, area, circumference);
-        this.dimensionY = dimensionY;
+    public double getSideA() {
+        return sideA;
     }
 
-    public double getDimensionY() {
-        return dimensionY;
-    }
-
-    public void setDimensionY(double dimensionY) {
-        this.dimensionY = dimensionY;
+    public double getSideB() {
+        return sideB;
     }
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "dimensionY=" + dimensionY +
-                '}' + super.toString();
+        return "Prostokąt o wymiarach: " + sideA + " x " + sideB;
     }
 }
