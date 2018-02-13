@@ -2,24 +2,36 @@ import static java.lang.Math.*;
 
 public class ShapeCalculator extends LineCalc implements Calc2D, Calc3D{
 
-    public void circleArea(Circle circle){
-        System.out.printf("Powierzchnia kołą wynosi [cm2]: %.2f",PI*pow(circle.getDimensionX(),2));
-        System.out.println();
+    public double circleArea(Circle circle){
+        return PI*pow(circle.getRadius(),2);
     }
 
-    public void rectangleArea (Rectangle rectangle){
-        System.out.printf("Powierzchnia prostokąta wynosi [cm2]: %.2f",rectangle.getDimensionX()*rectangle.getDimensionY());
-        System.out.println();
+    public double circleCircumference(Circle circle){
+        return 2*PI*circle.getRadius();
     }
 
-    public void ballVolume(Ball ball){
-        System.out.printf("Objętość kuli wynosi [cm3]: %.2f",(4/3)*PI*pow(ball.getDimensionX(),3));
-        System.out.println();
+    public double rectangleArea (Rectangle rectangle){
+        return rectangle.getSideA()*rectangle.getSideB();
     }
 
-    public void cubeVolume(Cube cube){
-        System.out.printf("Objętość sześcianu wynosi [cm3]: %.2f",pow(cube.getDimensionX(),3));
-        System.out.println();
+    public double rectangleCircumference (Rectangle rectangle){
+        return (2 * rectangle.getSideA()) + (2 * rectangle.getSideB());
+    }
+
+    public double ballVolume(Ball ball){
+        return (4/3)*PI*pow(ball.getRadius(),3);
+    }
+
+    public double ballSurfaceArea(Ball ball){
+        return 4*PI*pow(ball.getRadius(),2);
+    }
+
+    public double cubeVolume(Cube cube){
+        return pow(cube.getSide(),3);
+    }
+
+    public double cubeSurfaceArea(Cube cube){
+        return 6*(pow(cube.getSide(),2));
     }
 
 }
