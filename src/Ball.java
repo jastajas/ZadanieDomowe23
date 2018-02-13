@@ -1,10 +1,17 @@
 public class Ball extends Shape3D {
 
-    public Ball(double dimensionX) {
-        super(dimensionX);
+    private double radius;
+
+    public Ball(double radius) {
+        this.radius = radius;
     }
 
-    public Ball(double dimensionX, double area, double volume) {
-        super(dimensionX, area, volume);
+    public double getRadius() {
+        return radius;
+    }
+
+    @Override
+    public String toString() {
+        return "Promień koła: " + radius;
     }
 }
